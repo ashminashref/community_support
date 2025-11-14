@@ -1,0 +1,27 @@
+.quick-p { 
+  font-size: 0.9rem;
+}
+
+ 
+.quick-box {
+  
+  min-height: 120px; 
+  
+  padding: 15px;
+  color: white;
+  cursor: pointer;
+  
+  
+
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.quick-box:hover {
+  transform: translateY(-4px); /* Lifts the card up slightly */
+}
+
+.quick-icon {
+  font-size: 2.5rem !important; 
+  margin-bottom: 10px;
+}
+
