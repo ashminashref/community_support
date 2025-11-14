@@ -27,7 +27,7 @@ body {
   /* qucik-box */
   --quick-box-bg-light:rgb(243, 241, 241);
   --quick-box-bg-dark:rgb(12, 12, 12);
-
+/* warning text box */
 
 }
 
@@ -61,6 +61,12 @@ body .app.dark .quick-box{
 }
 body .app.light .quick-box{
   background-color: var(--quick-box-bg-light);
+}
+body .app.dark .warn-box{
+  
+}
+--warn-bg-dark{
+  color: red;
 }
 
 /* make icons inherit color */

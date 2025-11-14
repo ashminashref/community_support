@@ -1,0 +1,128 @@
+/* This CSS assumes your main app file (App.js or index.js)
+  is adding a 'dark' class to the <body> tag for dark mode.
+*/
+
+/* --- 1. Color Variables (Light Mode) --- */
+:root {
+  /* Card Colors */
+  --card-bg: #f9f9f9;
+  --card-title-color: #000000;
+  --card-number-color: #333333;
+  --call-icon-color: #6a00ff;
+  
+  /* Icon Colors (Light) */
+  --police-bg: #e6f0ff;
+  --police-icon-color: #0052cc;
+
+  --ambulance-bg: #e6f9f0;
+  --ambulance-icon-color: #006644;
+  
+  --fire-bg: #fff0e6;
+  --fire-icon-color: #d94000;
+}
+
+/* --- 2. Color Variables (Dark Mode) --- */
+/* When the body has the 'dark' class, override the variables */
+body.dark {
+  /* Card Colors */
+  --card-bg: #1c1c1e;
+  --card-title-color: #ffffff;
+  --card-number-color: #8e8e93;
+  --call-icon-color: #ab6fff;
+  
+  /* Icon Colors (Dark) */
+  --police-bg: #002b66;
+  --police-icon-color: #b3d1ff;
+
+  --ambulance-bg: #003322;
+  --ambulance-icon-color: #b3ffdd;
+
+  --fire-bg: #661f00;
+  --fire-icon-color: #ffc299;
+}
+
+
+/* --- 3. Component Styles --- */
+
+.emergency-intro {
+  color: var(--card-number-color); /* Uses a responsive color */
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.emergency-list {
+  display: grid;
+  gap: 0.75rem; /* 12px gap between cards */
+}
+
+.emergency-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem; /* 16px */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  /* Adds a subtle border like in the image */
+  border: 1px solid rgba(142, 142, 142, 0.3);
+}
+
+.card-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* 16px */
+}
+
+.icon-bg {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Color variants for icons */
+.icon-bg.police {
+  background-color: var(--police-bg);
+  color: var(--police-icon-color);
+}
+.icon-bg.ambulance {
+  background-color: var(--ambulance-bg);
+  color: var(--ambulance-icon-color);
+}
+.icon-bg.fire {
+  background-color: var(--fire-bg);
+  color: var(--fire-icon-color);
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--card-title-color);
+  margin: 0;
+  padding: 0;
+}
+
+.card-number {
+  font-size: 0.9rem;
+  color: var(--card-number-color);
+  margin: 0;
+  padding: 0;
+}
+
+.call-icon {
+  color: var(--call-icon-color);
+  cursor: pointer;
+}
+
+.call-icon svg {
+  width: 24px;
+  height: 24px;
+}
