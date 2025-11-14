@@ -28,11 +28,7 @@ body {
   --quick-box-bg-light:rgb(243, 241, 241);
   --quick-box-bg-dark:rgb(12, 12, 12);
 
-  /* gradients for icons */
-  --gradient-default: linear-gradient(135deg, #333333, #222222);
-  --gradient-danger: linear-gradient(135deg, #d32f2f, #5a0000);
-  --gradient-info: linear-gradient(135deg, #0072ff, #003c7a);
-  --gradient-success: linear-gradient(135deg, #28b485, #0a3d15);
+
 }
 
 /* LIGHT THEME */

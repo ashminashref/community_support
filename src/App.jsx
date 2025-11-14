@@ -4,6 +4,7 @@ import { Routes, Route, Outlet } from 'react-router-dom';
 import { ThemeProvider, useTheme } from './Sharedcomp/ThemeContext'; // Adjust path
 import Home from './Pages/Home';
 import './App.css'; 
+import Emergency from './Pages/Emergency';
 
 
 // This component reads the theme and applies the CSS class.
@@ -30,6 +31,7 @@ function App() {
       <Routes>
         <Route element={<ThemeWrapper />}>
           <Route path="/" element={<Home />} />
+          <Route path = 'emergency' element ={<Emergency/>}/>
         </Route>
       </Routes>
     </ThemeProvider>
